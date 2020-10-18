@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('dotenv').config()
+require('dotenv').config({path: '.env.local'});
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -9,11 +9,11 @@ mongoose.set('useUnifiedTopology', true)
 mongoose.Promise = global.Promise;
 
 try {
-	mongoose.connect(process.env.MONGO_URI);
+	mongoose.connect(process.env.HEROKU_MONGO_URI);
 } catch (e) {
 	console.log(e);
 }
 
-module.exports ={
+module.exports = {
 	mongoose
-}
+};
