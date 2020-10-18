@@ -7,9 +7,9 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true)
 
 mongoose.Promise = global.Promise;
-console.log(process.env.HEROKU_MONGO_URI)
+console.log(process.env.MONGO_URI)
 try {
-	mongoose.connect(process.env.HEROKU_MONGO_URI);
+	mongoose.connect(process.env.MONGO_URI);
 } catch (e) {
 	console.log(e);
 }
