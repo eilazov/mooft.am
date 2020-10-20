@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 // require('dotenv').config({path: '.env.local'});
 
 mongoose.set('useNewUrlParser', true);
